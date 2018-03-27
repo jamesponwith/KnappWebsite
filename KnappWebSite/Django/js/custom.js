@@ -1,4 +1,48 @@
 
+// JQuery UI accordion js
+$( function() {
+  $( "#accordion" ).accordion({header: "> div > h3"});
+} );
+
+var marker;
+var map;
+$(function initMap() {
+  var uluru = {lat: 32.771481, lng: -117.189610};
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: uluru
+  });
+  marker = new google.maps.Marker({
+      position: uluru,
+      animation: google.maps.Animation.DROP,
+      icon: 'https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-32.png',
+    });
+    marker.setMap(map);
+    map.panTo(marker.position);
+  // marker = new google.maps.Marker({
+  //   position: uluru,
+  //   map: map
+  // });
+});
+
+  // map.mapTypes.set('map_style', styledMap);
+  // map.setMapTypeId('map_style')
+
+   // marker = new google.maps.Marker({
+   //     position: new google.maps.LatLng(3.167244, 101.612950),
+   //     animation: google.maps.Animation.DROP,
+   //     icon: 'https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-32.png',
+   // });
+
+
+// Change location of pin
+
+function changeMarkerPos(lat, lon){
+  myLatLng = new google.maps.LatLng(lat, lon)
+  marker.setPosition(myLatLng);
+  map.panTo(myLatLng);
+}
+
 $(function (){
 
     "use strict";
@@ -37,6 +81,7 @@ $(function (){
         startDelay: 1000,
         backDelay: 2000
     });
+
 
 
     //smooth button scroll
@@ -122,7 +167,7 @@ $(function (){
     // isotope
     $('.gallery').isotope({
       // options
-      itemSelector: '.item-img'
+      itemSelector: '.item-img2'
     });
 
     var $gallery = $('.gallery').isotope({
@@ -132,9 +177,17 @@ $(function (){
     // filter items on button click
     $('.filtering').on( 'click', 'span', function() {
 
-        var filterValue = $(this).attr('data-filter');
-
-        $gallery.isotope({ filter: filterValue });
+        var filterValue = $(this).attr('data-filter')+ '.item-img';
+        var hidden = $('.gallery').find('.item-img').hide();
+        var filtered = $('.gallery').find(filterValue).show();
+        // for (var i=0;i<items.length;i++) {
+        //   if ($(items[i]).hasClass(filterValue)) {
+        //     console.log(items,"fell through")
+        //   }else{
+        //     console.log(items,"was blocked")
+        //   }
+        //}
+          // $gallery.isotope({ filter: filterValue });
 
     });
 
