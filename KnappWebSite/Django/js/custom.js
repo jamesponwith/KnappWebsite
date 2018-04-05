@@ -1,7 +1,10 @@
 
 // JQuery UI accordion js
 $( function() {
-  $( "#accordion" ).accordion({header: "> div > h3"});
+  $( "#accordion" ).accordion({
+    header: "> div > h3",
+    collapsible: true
+  });
 } );
 
 var marker;
