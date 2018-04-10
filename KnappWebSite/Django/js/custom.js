@@ -79,7 +79,7 @@ $(function (){
 
     // typejs
     $('.caption h4 span').typed({
-        strings: ["Crease","Cut","Create", "Innovate"],
+        strings: ["Fold","Cut","Glue", "Create!"],
         loop: true,
         startDelay: 1000,
         backDelay: 2000
@@ -135,8 +135,7 @@ $(function (){
     $('.blog .owl-carousel').owlCarousel({
         loop:true,
         mouseDrag:false,
-        autoplay:true,
-        smartSpeed:500,
+        autoplay:false,
         dots:false,
         margin:30,
         responsiveClass:true,
@@ -153,6 +152,13 @@ $(function (){
         }
     });
 
+    // owlCarousel
+    $('.videos .owl-carousel').owlCarousel({
+        items:1,
+        loop:true,
+        mouseDrag:false,
+        autoplay:false,
+    });
 
     // owlCarousel
     $('.clients .owl-carousel').owlCarousel({
@@ -160,22 +166,10 @@ $(function (){
         loop:true,
         mouseDrag:false,
         autoplay:true,
-        smartSpeed:500
     });
 
     // stellar
     wind.stellar();
-
-
-    // isotope
-    $('.gallery').isotope({
-      // options
-      itemSelector: '.item-img2'
-    });
-
-    var $gallery = $('.gallery').isotope({
-      // options
-    });
 
     // filter items on button click
     $('.filtering').on( 'click', 'span', function() {
