@@ -1,6 +1,6 @@
 
 /* -------------------------------------------------------
-                     phone & tablet 
+                     phone & tablet
 -------------------------------------------------------- */
 
 @media (max-width: 767px){
@@ -20,7 +20,7 @@
 	.navbar .navbar-toggle .icon-bar{
 		background: #fff;
 	}
-		
+
 	.navbar .navbar-collapse{
 		text-align: center;
 		border: none;

@@ -41,6 +41,14 @@ body{
 	font-weight: 900;
 	text-transform: capitalize;
 }
+.tat{
+	margin-top: 60px;
+	margin-bottom: 20px;
+	display:  inline-block;
+	font-size: 38px;
+	font-weight: 900;
+	text-transform: capitalize;
+}
 
 p{
 	color: #888;
@@ -100,7 +108,7 @@ textarea:focus
 }
 
 .navbar .navbar-nav>li{
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	margin: 20px 15px 0;
 	padding: 5 10px;
