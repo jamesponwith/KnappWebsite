@@ -325,6 +325,11 @@ textarea:focus
 	width: 0;
 	transition: all .5s;
 }
+
+.item-img {
+	max-height: 300px;
+	overflow-y: scroll;
+}
 /*
 .item-img {
 	padding: 15px;
