@@ -4,9 +4,13 @@ $( function() {
   $( "#accordion" ).accordion({
     header: "> div > h3",
     collapsible: true,
-    active: false
-
+    active: false,
+    heightStyle: "content"
   });
+
+// Vertical tabs
+$( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+$( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 } );
 
 var marker;
