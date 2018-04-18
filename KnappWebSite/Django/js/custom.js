@@ -185,6 +185,7 @@ $(function (){
         loop:true,
         mouseDrag:false,
         autoplay:true,
+        autoplayTimeout:20000
     });
 
     // stellar
