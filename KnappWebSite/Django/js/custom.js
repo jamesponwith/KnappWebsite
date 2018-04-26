@@ -13,6 +13,19 @@ $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
 $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 } );
 
+// SLIDE SHOW GALLERY
+// $blueimp.Gallery(
+//     document.getElementById('links').getElementsByTagName('a'),
+//     {
+//         container: '#blueimp-gallery-carousel',
+//         carousel: true
+//     }
+// );
+
+
+
+// Google Maps API
+
 var marker;
 var map;
 $(function initMap() {
@@ -177,6 +190,14 @@ $(function (){
         loop:true,
         mouseDrag:false,
         autoplay:false,
+    });
+
+    $('.slideshow .owl-carousel').owlCarousel({
+        items:1,
+        loop:true,
+        mouseDrag:false,
+        autoplay:true,
+        autoplayTimeout:20000
     });
 
     // owlCarousel
