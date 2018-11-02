@@ -5,3 +5,5 @@ This project is a webpage that will be hosted on University of San Diego servers
 This project was developed with a combination of HTML, Javascript, and CSS. 
 
 url: home.sandiego.edu/~jponwith/
+
+View the open Issues for snippets of webpage.
